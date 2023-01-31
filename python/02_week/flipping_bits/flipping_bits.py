@@ -14,16 +14,16 @@ import sys
 #
 
 def flippingBits(n):
-    flipped_n = ''
-    new_n = f'{n:032b}'
+    flipped_s_int = ''
+    signed_int = f'{n:032b}'
 
-    for n in new_n:
+    for n in signed_int:
         if n == '0':
-            flipped_n += '1'
+            flipped_s_int += '1'
         else:
-            flipped_n += '0'
+            flipped_s_int += '0'
 
-    return int(flipped_n, 2)
+    return int(flipped_s_int, 2)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
