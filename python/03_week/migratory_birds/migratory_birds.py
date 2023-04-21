@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+
 #
 # Complete the 'migratoryBirds' function below.
 #
@@ -24,6 +25,13 @@ def migratoryBirds(arr):
 
     birds_filtered = {x: y for x, y in birds.items() if y == max(birds.values())}
     return min(birds_filtered)
+
+    # ========================================================================================
+    # arr.sort()
+    # sights_dict = {x: arr.count(x) for x in set(arr)}
+    #
+    # return max(sights_dict, key=sights_dict.get)
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
